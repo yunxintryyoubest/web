@@ -1,0 +1,49 @@
+官方安装指南：https://doc.scrapy.org/en/latest/intro/install.html#intro-install-platform-notes
+
+使用虚拟环境（推荐）
+TL; DR：我们建议在所有平台上的虚拟环境中安装Scrapy。
+
+Python包可以全局安装（也称为系统范围），也可以安装在用户空间中。我们不建议安装scrapy系统。
+
+相反，我们建议您在所谓的“虚拟环境”（virtualenv）中安装scrapy 。Virtualenvs允许您不与已安装的Python系统包冲突（这可能会破坏您的一些系统工具和脚本），并且仍然通常使用pip（没有sudo和喜欢）安装包。
+
+要开始使用虚拟环境，请参阅virtualenv安装说明。要全局安装它（全局安装它实际上有帮助），它应该是运行的问题：
+
+$ [sudo] pip install virtualenv
+
+
+Scrapy在CPython（默认Python实现）和PyPy（从PyPy 5.9开始）下运行Python 2.7和Python 3.4或更高版本。
+
+如果您使用的是Anaconda或Miniconda，您可以从conda- forge通道安装该软件包，该软件包含适用于Linux，Windows和OS X的最新软件包。
+
+要使用安装Scrapy conda，请运行：
+
+conda install -c conda-forge scrapy
+
+或者，如果您已经熟悉Python包的安装，则可以使用以下命令从PyPI安装Scrapy及其依赖项：
+
+pip install Scrapy
+
+请注意，有时这可能需要根据您的操作系统解决某些Scrapy依赖项的编译问题，因此请务必查看特定于 平台的安装说明。
+
+
+有用的东西
+Scrapy是用纯Python编写的，取决于一些关键的Python包（以及其他）：
+
+lxml，一个高效的XML和HTML解析器
+parsel，一个在lxml之上编写的HTML / XML数据提取库，
+w3lib，一个用于处理URL和网页编码的多用途帮助程序
+twisted，一个异步网络框架
+cryptography和pyOpenSSL，用于处理各种网络级安全需求
+Scrapy经过测试的最小版本是：
+Twisted14.0
+lxml 3.4
+pyOpenSSL 0.14
+Scrapy可能适用于这些软件包的旧版本，但不保证它会继续工作，因为它没有针对它们进行测试。
+
+其中一些软件包本身依赖于非Python软件包，可能需要额外的安装步骤，具体取决于您的平台。请查看下面的平台特定指南。
+
+如果与这些依赖关系有任何问题，请参阅各自的安装说明：
+
+lxml安装
+加密安装
