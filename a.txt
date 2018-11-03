@@ -1,2 +1,2 @@
-a.txt  first
-ÎÄ±¾ÐÞ¸Ä 
+a.txt  firsti
+git modify
